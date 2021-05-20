@@ -1,0 +1,16 @@
+.app-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+
+    grid-template-rows: 1fr 9rem;
+    grid-template-columns: 24rem 1fr;
+}
+
+.main-container {
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
+    background-color: $color-grey-darker;
+    max-height: 100%;
+    overflow: auto;
+}

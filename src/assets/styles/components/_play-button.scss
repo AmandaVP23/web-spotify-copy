@@ -1,0 +1,16 @@
+.play-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-primary;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    color: $color-white;
+    flex: 0 0 4rem;
+    box-shadow: 0 8px 8px rgb(0 0 0 / 30%);
+
+    &--show {
+        opacity: 1 !important;
+    }
+}

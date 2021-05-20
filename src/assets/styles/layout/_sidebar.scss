@@ -1,0 +1,79 @@
+.sidebar {
+    grid-row: 1 / 1;
+    background-color: $color-black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    padding-top: 2rem;
+    font-weight: 500;
+
+    &__icon-link,
+    &__icon-link:link,
+    &__icon-link:visited {
+        color: $color-white;
+        display: inline-block;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+
+        svg {
+            width: 15rem;
+        }
+    }
+
+    &__nav {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        &__item:link,
+        &__item:visited, {
+            display: inline-flex;
+            align-items: center;
+            color: $color-grey-lighter;
+            padding: .8rem 1rem;
+            width: 100%;
+            text-decoration: none;
+            line-height: 1;
+            background-color: transparent;
+            transition: all .3s;
+
+            svg {
+                margin-right: 1.5rem;
+            }
+        }
+
+        &__item--active:link,
+        &__item--active:visited {
+            border-radius: 3px;
+            background-color: $color-grey;
+            color: $color-white;
+        }
+    }
+
+    &__divider {
+        height: 1px;
+        background-color: $color-grey;
+        margin: 2rem 2rem;
+    }
+
+    &__playlists {
+        padding-left: 2rem;
+        padding-bottom: 1rem;
+        flex: 1 1 auto;
+        overflow: auto;
+        color: $color-grey-lighter;
+        list-style: none;
+        transition: all .3s;
+        cursor: pointer;
+
+        &__item:not(:last-of-type) {
+            margin-bottom: 1rem;
+        }
+
+        &__item:hover {
+            color: $color-white;
+        }
+    }
+}
