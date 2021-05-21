@@ -1,0 +1,70 @@
+.element-card {
+    background-color: $color-grey-dark;
+    cursor: pointer;
+    padding: 1.6rem;
+    height: 100%;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: $color-grey;
+
+        .play-button {
+            opacity: 1;
+        }
+    }
+
+    .paragraph {
+        margin-bottom: .8rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__subtitle {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $color-grey-lighter;
+        line-height: 1.5rem;
+        max-height: 2.8rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__top {
+        margin-bottom: 1.6rem;
+        position: relative;
+        width: 100%;
+
+        &__wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%; // trick -> the wrapper will be a square, then the img is positioned absolute
+        }
+
+        &__img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            box-shadow: 0 8px 2.4rem rgb(0 0 0 / 50%);
+            object-fit: cover;
+            object-position: center center;
+
+            &--rounded {
+                border-radius: 50%;
+            }
+        }
+
+        .play-button {
+            position: absolute;
+            bottom: .8rem;
+            right: .8rem;
+            opacity: 0;
+            transition: all .4s;
+        }
+    }
+}

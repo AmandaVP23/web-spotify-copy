@@ -10,10 +10,32 @@
     color: $color-white;
 }
 
+.paragraph,
 .link:link,
 .link:visited {
     font-size: 1.6rem;
     font-weight: 700;
     color: $color-white;
     text-decoration: none;
+}
+
+.grey-uppercase-link:link,
+.grey-uppercase-link:visited, {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $color-grey-lighter;
+    text-decoration: none;
+    transition: all .4s;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.small-paragraph {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $color-grey-lighter;
 }
